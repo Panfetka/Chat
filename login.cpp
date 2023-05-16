@@ -1,6 +1,8 @@
 #include "login.h"
 #include "ui_login.h"
 
+#include <QColorDialog>
+
 Login::Login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Login)
@@ -22,6 +24,6 @@ void Login::on_pushButton_pressed()
 
 void Login::on_Color_clicked()
 {
-
+    color = QColorDialog::getColor();
 }
 
