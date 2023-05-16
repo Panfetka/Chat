@@ -17,6 +17,7 @@ public:
     Ui::Login *ui;
     QString ip;
     QString name;
+    QColor color;
 private slots:
     void on_pushButton_pressed();
     void on_Color_clicked();
