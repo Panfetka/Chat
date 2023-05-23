@@ -7,9 +7,12 @@ Message::Message(QString name, QColor color, QString text, QWidget *parent):
     ui->setupUi(this);
     ui->name->setText(name);
     ui->message->setText(text);
-    QPalette pal=palette();
-    pal.setColor(QPalette::WindowText, color);
-    setPalette(pal);
+//    QPalette pal=palette();
+//    pal.setColor(QPalette::WindowText, color);
+//    ui->message->setPalette(pal);
+    ui->message->setStyleSheet("QLabel { color :" +color.name()+ "; background-color: rgb(255, 174, 210);}");
+    ui->name->setStyleSheet("QLabel { color :" +color.name()+ "; background-color: rgb(255, 174, 210);}");
+
 }
 
 Message::~Message()

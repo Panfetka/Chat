@@ -59,9 +59,9 @@ background-color: rgb(255, 174, 210);</string>
    <item>
     <widget class="QLabel" name="message">
      <property name="styleSheet">
-      <string notr="true">color: rgb(15, 15, 15);
+      <string notr="true">
 
-background-color: rgb(255, 174, 210);
+
 </string>
      </property>
      <property name="text">
