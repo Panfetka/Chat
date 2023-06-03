@@ -23,7 +23,7 @@ void MainWindow::onRead()
     while(socket.bytesAvailable())
     {
         QString str = socket.readAll();
-        auto l = str.split('#');
+        auto l = str.split('~');
         qDebug()<<l;
         auto m=new Message(l[0], l[1], l[2]);
         m->setLayoutDirection(Qt::LeftToRight);
@@ -48,9 +48,9 @@ void MainWindow::onConnect()
 void MainWindow::on_send_pressed()
 {
     socket.write(name.toLocal8Bit());
-    socket.write("#");
+    socket.write("~");
     socket.write(color.name().toLocal8Bit());
-    socket.write("#");
+    socket.write("~");
     auto str=ui->text->toPlainText();
     socket.write(str.toLocal8Bit());
 
